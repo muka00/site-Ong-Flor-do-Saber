@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transparência - ONG Flor do Saber 🌼</title>
+  <style>
+    body {
+      background-color: #f2f2f2; /* fundo cinza claro */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header div {
+      background-color: #4CAF50;
+      padding: 40px 0;
+      color: white;
+    }
+
+    nav {
+      margin: 10px 0;
+    }
+
+    nav a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      margin: 20px auto;
+      max-width: 1000px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2, h3 {
+      color: #333;
+    }
+
+    footer {
+      background-color: #ddd;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Cabeçalho -->
+<header>
+  <div>
+    <h1>ONG Flor do Saber 🌼</h1>
+  </div>
+
+<!-- Menu de navegação -->
+  <nav style="background-color:white; text-align:center; padding:10px 0; border-top:5px solid #4CAF50;">
+    <a href="index.html" style="color:black; text-decoration:none; margin:0 10px;">Início</a> |
+    <a href="projetos.html" style="color:black; text-decoration:none; margin:0 10px;">Projetos</a> |
+    <a href="cadastro.html" style="color:black; text-decoration:none; margin:0 10px;">Cadastre-se</a> |
+    <a href="doacoes.html" style="color:black; text-decoration:none; margin:0 10px;">Doações</a> |
+    <a href="transparencia.html" style="color:black; text-decoration:none; margin:0 10px;">Portal da Transparência</a> |
+    <a href="contato.html" style="color:black; text-decoration:none; margin:0 10px;">Contato</a> |
+    <a href="blog.html" style="color:black; text-decoration:none; margin:0 10px;">Nosso Blog</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Portal da Transparência 🌼</h2>
+  <p>Acompanhe os dados e resultados dos nossos projetos. Nosso compromisso é com a clareza e a confiança de todos os nossos colaboradores e doadores.</p>
+
+  <!-- Gráfico de pizza: distribuição de recursos -->
+  <section>
+    <h3>Distribuição de Recursos por Projeto</h3>
+    <canvas id="graficoPizza" width="1000" height="700"></canvas>
+  </section>
+
+  <!-- Gráfico de linha: evolução de voluntários -->
+  <section>
+    <h3>Evolução de Voluntários ao Longo do Tempo</h3>
+    <canvas id="graficoLinha" width="1000" height="700"></canvas>
+  </section>
+
+  <!-- Gráfico de barras: impacto social por região -->
+  <section>
+    <h3>Impacto Social por Região</h3>
+    <canvas id="graficoBarras" width="1000" height="700"></canvas>
+  </section>
+</main>
+
+<!-- Rodapé -->
+<footer>
+  <p>&copy; 2025 ONG Flor do Saber 🌼 — Todos os direitos reservados.</p>
+</footer>
+
+<script>
+  // GRÁFICO DE PIZZA
+  const ctxPizza = document.getElementById('graficoPizza').getContext('2d');
+  const dadosPizza = [
+    {nome: "Reforço Escolar", valor: 5000, cor: "#4CAF50"},
+    {nome: "Recreação e Cultura", valor: 3000, cor: "#FF9800"},
+    {nome: "Eventos Educativos", valor: 2000, cor: "#2196F3"},
+    {nome: "Outros", valor: 1000, cor: "#9C27B0"}
+  ];
+  let totalPizza = dadosPizza.reduce((a,b)=>a+b.valor,0);
+  let angInicial = 0;
+  dadosPizza.forEach(d => {
+    let ang = d.valor / totalPizza * 2 * Math.PI;
+    ctxPizza.beginPath();
+    ctxPizza.moveTo(250,200);
+    ctxPizza.arc(250,200,150,angInicial,angInicial+ang);
+    ctxPizza.fillStyle = d.cor;
+    ctxPizza.fill();
+    angInicial += ang;
+  });
+  ctxPizza.font = '14px Arial';
+  ctxPizza.fillStyle = 'black';
+  let posY = 30;
+  dadosPizza.forEach(d => {
+    ctxPizza.fillStyle = d.cor;
+    ctxPizza.fillRect(420,posY-10,20,20);
+    ctxPizza.fillStyle = 'black';
+    ctxPizza.fillText(`${d.nome}: R$${d.valor}`,450,posY+5);
+    posY += 25;
+  });
+
+  // GRÁFICO DE LINHA
+  const ctxLinha = document.getElementById('graficoLinha').getContext('2d');
+  const meses = ["Jan","Fev","Mar","Abr","Mai","Jun"];
+  const voluntarios = [10,20,25,35,45,60];
+  ctxLinha.beginPath();
+  ctxLinha.moveTo(50,350);
+  ctxLinha.lineTo(450,350);
+  ctxLinha.moveTo(50,350);
+  ctxLinha.lineTo(50,50);
+  ctxLinha.strokeStyle = 'black';
+  ctxLinha.stroke();
+  ctxLinha.beginPath();
+  for(let i=0;i<voluntarios.length;i++){
+      const x = 50 + i*70;
+      const y = 350 - voluntarios[i]*4;
+      if(i===0) ctxLinha.moveTo(x,y);
+      else ctxLinha.lineTo(x,y);
+  }
+  ctxLinha.strokeStyle = "#2196F3";
+  ctxLinha.lineWidth = 2;
+  ctxLinha.stroke();
+  for(let i=0;i<voluntarios.length;i++){
+      const x = 50 + i*70;
+      const y = 350 - voluntarios[i]*4;
+      ctxLinha.beginPath();
+      ctxLinha.arc(x,y,5,0,2*Math.PI);
+      ctxLinha.fillStyle = "#2196F3";
+      ctxLinha.fill();
+      ctxLinha.fillStyle = "black";
+      ctxLinha.fillText(voluntarios[i], x-10, y-10);
+  }
+  ctxLinha.fillStyle = "black";
+  meses.forEach((m,i)=>{
+      ctxLinha.fillText(m, 50 + i*70 - 10, 370);
+  });
+
+  // GRÁFICO DE BARRAS
+  const ctxBarras = document.getElementById('graficoBarras').getContext('2d');
+  const regioes = [
+    {nome:"Centro", valor:80, cor:"#4CAF50"},
+    {nome:"Norte", valor:120, cor:"#FF9800"},
+    {nome:"Sul", valor:60, cor:"#2196F3"},
+    {nome:"Leste", valor:100, cor:"#9C27B0"},
+    {nome:"Oeste", valor:90, cor:"#F44336"}
+  ];
+  const larguraBarra = 50;
+  ctxBarras.beginPath();
+  ctxBarras.moveTo(50,350);
+  ctxBarras.lineTo(450,350);
+  ctxBarras.moveTo(50,350);
+  ctxBarras.lineTo(50,50);
+  ctxBarras.stroke();
+  regioes.forEach((r,i)=>{
+    const x = 70 + i*80;
+    const altura = r.valor*2;
+    ctxBarras.fillStyle = r.cor;
+    ctxBarras.fillRect(x,350-altura,larguraBarra,altura);
+    ctxBarras.fillStyle='black';
+    ctxBarras.fillText(r.nome,x,370);
+    ctxBarras.fillText(r.valor,x+10,340-altura);
+  });
+</script>
+
+</body>
+</html>

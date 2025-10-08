@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - ONG Flor do Saber 🌼</title>
+</head>
+<body style="background-color:#f2f2f2; text-align:center; font-family:Arial, sans-serif;">
+
+<!-- ====== CABEÇALHO ====== -->
+<header>
+  <div style="background-color:#4CAF50; padding:40px 0;">
+    <h1 style="color:white; margin:0;">ONG Flor do Saber 🌼</h1>
+  </div>
+
+ <!-- Menu de navegação -->
+  <nav style="background-color:white; text-align:center; padding:10px 0; border-top:5px solid #4CAF50;">
+    <a href="index.html" style="color:black; text-decoration:none; margin:0 10px;">Início</a> |
+    <a href="projetos.html" style="color:black; text-decoration:none; margin:0 10px;">Projetos</a> |
+    <a href="cadastro.html" style="color:black; text-decoration:none; margin:0 10px;">Cadastre-se</a> |
+    <a href="doacoes.html" style="color:black; text-decoration:none; margin:0 10px;">Doações</a> |
+    <a href="transparencia.html" style="color:black; text-decoration:none; margin:0 10px;">Portal da Transparência</a> |
+    <a href="contato.html" style="color:black; text-decoration:none; margin:0 10px;">Contato</a> |
+    <a href="blog.html" style="color:black; text-decoration:none; margin:0 10px;">Nosso Blog</a>
+  </nav>
+</header>
+
+<!-- ====== CONTEÚDO PRINCIPAL ====== -->
+<main>
+  <h2>Nosso Blog 🌻</h2>
+  <p>Fique por dentro das novidades, projetos e histórias inspiradoras da nossa ONG!</p>
+  <hr>
+
+  <!-- Post 1 -->
+  <article>
+    <h3>🌱 Novo Projeto de Jardinagem Sustentável</h3>
+    <p><small>Publicado em 05 de Outubro de 2025</small></p>
+    <img src="imagens/projeto_jardinagem.png" alt="Projeto de Jardinagem" width="750">
+    <p>A ONG Flor do Saber iniciou um projeto de jardinagem sustentável com as crianças, ensinando o cuidado com a natureza e a importância da preservação do meio ambiente.</p>
+  </article>
+
+  <hr>
+
+  <!-- Post 2 -->
+  <article>
+    <h3>🎨 Arte e Expressão nas Aulas da ONG</h3>
+    <p><small>Publicado em 28 de Setembro de 2025</small></p>
+    <img src="imagens/aula_de_arte.png" alt="Aula de Arte" width="750">
+    <p>As aulas de arte estão ajudando as crianças a desenvolverem a criatividade e a autoconfiança, com pinturas, colagens e oficinas de desenho.</p>
+  </article>
+
+  <hr>
+
+  <!-- Post 3 -->
+  <article>
+    <h3>🤝 Confraternização com Voluntários</h3>
+    <p><small>Publicado em 20 de Setembro de 2025</small></p>
+    <img src="imagens/confraternização.png" alt="Confraternização" width="750">
+    <p>Tivemos um dia incrível de integração entre voluntários e crianças da ONG, fortalecendo laços e celebrando o amor ao próximo.</p>
+  </article>
+
+  <hr>
+
+  <!-- Post 4 -->
+  <article>
+    <h3>📚 Hora da Leitura: Incentivando o Conhecimento</h3>
+    <p><small>Publicado em 10 de Setembro de 2025</small></p>
+    <img src="imagens/hora_da_leitura.png" alt="Hora da Leitura" width="750">
+    <p>O projeto “Hora da Leitura” está transformando o aprendizado das crianças, incentivando o hábito da leitura desde cedo.</p>
+  </article>
+
+  <hr>
+
+  <!-- Newsletter -->
+  <h2>Assine nossa Newsletter 🌼</h2>
+  <form>
+    <label for="email">Seu e-mail:</label><br>
+    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" style="width:100%; max-width:400px;"><br><br>
+
+    <label>Quais conteúdos você quer receber?</label><br>
+    <input type="checkbox" id="noticias" name="conteudo" value="noticias">
+    <label for="noticias">Notícias e eventos</label><br>
+
+    <input type="checkbox" id="projetos" name="conteudo" value="projetos">
+    <label for="projetos">Novos projetos sociais</label><br>
+
+    <input type="checkbox" id="voluntariado" name="conteudo" value="voluntariado">
+    <label for="voluntariado">Oportunidades de voluntariado</label><br><br>
+
+    <input type="submit" value="Cadastrar" style="background-color:#4CAF50; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+  </form>
+
+  <hr>
+
+  <!-- Envio de Post -->
+  <section>
+    <h2>Enviar um Post para Aprovação</h2>
+    <p>Envie seu conteúdo e aguarde a aprovação antes de publicar.</p>
+
+    <form>
+      <label for="postTitulo">Título do Post:</label><br>
+      <input type="text" id="postTitulo" name="postTitulo" required style="width:100%; max-width:600px;"><br><br>
+
+      <label for="postAutor">Seu Nome:</label><br>
+      <input type="text" id="postAutor" name="postAutor" required style="width:100%; max-width:600px;"><br><br>
+
+      <label for="postImagem">Link da Imagem:</label><br>
+      <input type="url" id="postImagem" name="postImagem" placeholder="https://exemplo.com/imagem.png" style="width:100%; max-width:600px;"><br><br>
+
+      <label for="postConteudo">Conteúdo do Post:</label><br>
+      <textarea id="postConteudo" name="postConteudo" rows="8" style="width:100%; max-width:600px;" required></textarea><br><br>
+
+      <button type="submit" style="background-color:#4CAF50; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">Enviar para Aprovação</button>
+    </form>
+  </section>
+</main>
+
+<!-- ====== RODAPÉ ====== -->
+<footer style="text-align:center; margin-top:40px;">
+  <p>&copy; 2025 ONG Flor do Saber 🌼 | Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doações - ONG Flor do Saber</title>
+  <style>
+    body {
+      background-color: #f2f2f2; /* fundo cinza claro */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center; /* centraliza os textos */
+    }
+
+    header div {
+      background-color: #4CAF50;
+      padding: 40px 0;
+      color: white;
+    }
+
+    nav {
+      margin: 10px 0;
+    }
+
+    nav a {
+      margin: 0 5px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea, button {
+      width: 80%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>ONG Flor do Saber 🌼</h1>
+  </div>
+
+<!-- Menu de navegação -->
+  <nav style="background-color:white; text-align:center; padding:10px 0; border-top:5px solid #4CAF50;">
+    <a href="index.html" style="color:black; text-decoration:none; margin:0 10px;">Início</a> |
+    <a href="projetos.html" style="color:black; text-decoration:none; margin:0 10px;">Projetos</a> |
+    <a href="cadastro.html" style="color:black; text-decoration:none; margin:0 10px;">Cadastre-se</a> |
+    <a href="doacoes.html" style="color:black; text-decoration:none; margin:0 10px;">Doações</a> |
+    <a href="transparencia.html" style="color:black; text-decoration:none; margin:0 10px;">Portal da Transparência</a> |
+    <a href="contato.html" style="color:black; text-decoration:none; margin:0 10px;">Contato</a> |
+    <a href="blog.html" style="color:black; text-decoration:none; margin:0 10px;">Nosso Blog</a>
+  </nav>
+
+</header>
+
+<main>
+  <h2>Faça sua Doação</h2>
+  <p>Ajude a ONG Flor do Saber a transformar vidas. Preencha o formulário abaixo e escolha o valor da sua doação.</p>
+
+  <form action="#" method="post">
+    <label for="nome">Nome Completo *</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail *</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefone">Telefone *</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
+
+    <label for="valor">Valor da Doação (R$) *</label>
+    <input type="number" id="valor" name="valor" min="1" required>
+
+    <label for="metodo">Método de Pagamento *</label>
+    <select id="metodo" name="metodo" required>
+      <option value="">Selecione</option>
+      <option value="cartaoCredito">Cartão de Crédito</option>
+      <option value="cartaoDebito">Cartão de Débito</option>
+      <option value="boleto">Boleto Bancário</option>
+      <option value="pix">PIX</option>
+    </select>
+
+    <label for="mensagem">Mensagem (opcional)</label>
+    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Deixe uma mensagem ou comentário"></textarea>
+
+    <button type="submit">Doar</button>
+  </form>
+</main>
+
+<script>
+  const telefoneInput = document.getElementById("telefone");
+  telefoneInput.addEventListener("input", function(e) {
+    let valor = e.target.value.replace(/\D/g, ""); 
+    if(valor.length > 11) valor = valor.slice(0,11);
+    let telefoneFormatado = "";
+    if(valor.length > 0){
+      telefoneFormatado = "(" + valor.substring(0,2);
+    }
+    if(valor.length >= 3){
+      telefoneFormatado += ") " + valor.substring(2,7);
+    }
+    if(valor.length >= 8){
+      telefoneFormatado += "-" + valor.substring(7,11);
+    }
+    e.target.value = telefoneFormatado;
+  });
+</script>
+
+<footer>
+  <p>&copy; 2025 ONG Flor do Saber 🌼. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
