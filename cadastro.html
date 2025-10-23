@@ -1,115 +1,48 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Voluntários - ONG Flor do Saber</title>
-  <style>
-    body {
-      background-color: #f2f2f2; 
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header div {
-      background-color: #4CAF50;
-      padding: 40px 0;
-      color: white;
-      text-align: center;
-    }
-    nav {
-      text-align: center;
-      margin: 10px 0;
-    }
-    nav a {
-      margin: 0 5px;
-      text-decoration: none;
-      color: #000;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    fieldset {
-      margin-bottom: 20px;
-      padding: 15px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-    }
-    input[type="text"],
-    input[type="number"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="date"],
-    textarea {
-      width: 100%;
-      padding: 8px;
-      box-sizing: border-box;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-    #privacyText {
-      background-color: #f9f9f9;
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 4px;
-    }
-    iframe {
-      width: 100%;
-      border: 0;
-      border-radius: 4px;
-    }
-  </style>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/toast.css">
 </head>
 <body>
 
 <header>
-  <div>
+  <div class="header-top">
     <h1>ONG Flor do Saber 🌼</h1>
   </div>
 
-<!-- Menu de navegação -->
-  <nav style="background-color:white; text-align:center; padding:10px 0; border-top:5px solid #4CAF50;">
-    <a href="index.html" style="color:black; text-decoration:none; margin:0 10px;">Início</a> |
-    <a href="projetos.html" style="color:black; text-decoration:none; margin:0 10px;">Projetos</a> |
-    <a href="cadastro.html" style="color:black; text-decoration:none; margin:0 10px;">Cadastre-se</a> |
-    <a href="doacoes.html" style="color:black; text-decoration:none; margin:0 10px;">Doações</a> |
-    <a href="transparencia.html" style="color:black; text-decoration:none; margin:0 10px;">Portal da Transparência</a> |
-    <a href="contato.html" style="color:black; text-decoration:none; margin:0 10px;">Contato</a> |
-    <a href="blog.html" style="color:black; text-decoration:none; margin:0 10px;">Nosso Blog</a>
+  <nav class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="cadastro.html">Cadastre-se</a></li>
+      <li><a href="doacoes.html">Doações</a></li>
+      <li><a href="transparencia.html">Portal da Transparência</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="blog.html">Nosso Blog</a></li>
+    </ul>
   </nav>
 </header>
 
 <main>
   <h2>Faça Seu Cadastro</h2>
 
-  <form>
+  <form id="cadastroForm">
+    <!-- Informações Pessoais -->
     <fieldset>
       <legend>Informações Pessoais</legend>
+
       <label for="nome">Nome Completo:</label>
       <input type="text" id="nome" name="nome" required>
 
@@ -120,7 +53,7 @@
       <input type="number" id="idade" name="idade" min="18" max="120">
 
       <label for="cpf">CPF:</label>
-      <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+      <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
 
       <label for="telefone">Telefone:</label>
       <input type="tel" id="telefone" placeholder="(00) 00000-0000" maxlength="15" required>
@@ -145,6 +78,7 @@
       <input type="text" id="estado" name="estado" required>
     </fieldset>
 
+    <!-- Áreas de Interesse -->
     <fieldset>
       <legend>Áreas de Interesse</legend>
       <label><input type="checkbox" name="area_interesse" value="Pedagógica"> Pedagógica</label>
@@ -156,6 +90,7 @@
       <input type="text" id="outrosTextoInteresse" name="outros_area_interesse" placeholder="Outra área de interesse" style="display:none; margin-top:8px;">
     </fieldset>
 
+    <!-- Experiência ou Formação -->
     <fieldset>
       <legend>Experiência ou Formação</legend>
       <label><input type="checkbox" name="experiencia" value="criancas"> Experiência com crianças</label>
@@ -166,12 +101,14 @@
       <input type="text" id="outrosTextoExp" name="outros_experiencia" placeholder="Especifique sua formação ou experiência" style="display:none; margin-top:8px;">
     </fieldset>
 
+    <!-- Motivação -->
     <fieldset>
       <legend>Motivação Pessoal</legend>
       <label for="motivacao">Por que você quer ser voluntário?</label>
       <textarea id="motivacao" name="motivacao" rows="10" required></textarea>
     </fieldset>
 
+    <!-- Localização -->
     <fieldset>
       <legend>Localização</legend>
       <iframe id="mapa" height="300" loading="lazy" allowfullscreen></iframe>
@@ -180,75 +117,113 @@
     <label><input type="checkbox" id="consentCheckbox"> Li e concordo com a <a href="#" onclick="togglePrivacy()">Política de Privacidade</a></label>
     <div id="privacyText" style="display:none;">
       <h3>Política de Privacidade</h3>
-      <p>Esta ONG respeita e protege os dados pessoais de todos os voluntários...</p>
+      <p>A Flor do Saber respeita a privacidade de seus usuários...</p>
     </div>
 
     <br>
-    <button type="submit">Enviar</button>
+    <button type="submit" class="botao">Enviar</button>
   </form>
 </main>
 
-<footer style="text-align:center; margin-top:20px; padding:20px; background-color:#ddd;">
-  <p>&copy; 2025 ONG Flor do Saber 🌼. Todos os direitos reservados.</p>
+<!-- Toast container -->
+<div id="toast" class="toast"></div>
+
+<footer style="text-align:center; margin-top:20px; padding:20px; background-color:#4CAF50; color:white;">
+  <p>&copy; <strong>ONG Flor do Saber 🌼. Todos os direitos reservados.</strong></p>
 </footer>
 
+<!-- JS -->
 <script>
-  // CPF
-  const cpfInput = document.getElementById('cpf');
-  cpfInput.addEventListener('input', function() {
-    let v = this.value.replace(/\D/g, '');
-    if (v.length > 11) v = v.slice(0,11);
-    v = v.replace(/(\d{3})(\d)/, '$1.$2');
-    v = v.replace(/(\d{3})(\d)/, '$1.$2');
-    v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-    this.value = v;
-  });
+  // Menu
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  menuToggle.addEventListener('click', () => menu.classList.toggle('active'));
 
-  // Telefone
-  const telefoneInput = document.getElementById("telefone");
-  telefoneInput.addEventListener("input", function(e) {
-    let valor = e.target.value.replace(/\D/g, ""); 
-    if(valor.length > 11) valor = valor.slice(0,11);
-    let telefoneFormatado = "";
-    if(valor.length > 0){
-      telefoneFormatado = "(" + valor.substring(0,2);
-    }
-    if(valor.length >= 3){
-      telefoneFormatado += ") " + valor.substring(2,7);
-    }
-    if(valor.length >= 8){
-      telefoneFormatado += "-" + valor.substring(7,11);
-    }
-    e.target.value = telefoneFormatado;
-  });
-
-  // Outros interesse
+  // Mostrar/esconder campos "outros"
   const outrosCheckInteresse = document.getElementById("outrosCheckInteresse");
   const outrosTextoInteresse = document.getElementById("outrosTextoInteresse");
-  outrosCheckInteresse.addEventListener("change", function() {
-    outrosTextoInteresse.style.display = this.checked ? "block" : "none";
-    if(!this.checked) outrosTextoInteresse.value = "";
+  outrosCheckInteresse.addEventListener("change", () => {
+    outrosTextoInteresse.style.display = outrosCheckInteresse.checked ? "block" : "none";
+    if(!outrosCheckInteresse.checked) outrosTextoInteresse.value = "";
   });
 
-  // Outros experiência
   const outrosCheckExp = document.getElementById("outrosCheckExp");
   const outrosTextoExp = document.getElementById("outrosTextoExp");
-  outrosCheckExp.addEventListener("change", function() {
-    outrosTextoExp.style.display = this.checked ? "block" : "none";
-    if(!this.checked) outrosTextoExp.value = "";
+  outrosCheckExp.addEventListener("change", () => {
+    outrosTextoExp.style.display = outrosCheckExp.checked ? "block" : "none";
+    if(!outrosCheckExp.checked) outrosTextoExp.value = "";
   });
 
-  // Toggle política
+  // Política de privacidade
   function togglePrivacy() {
     const text = document.getElementById("privacyText");
     text.style.display = text.style.display === "none" ? "block" : "none";
   }
 
-  // Busca CEP (exemplo simples)
-  function buscarCep() {
-    const cep = document.getElementById("cep").value;
-    alert("Função buscar CEP ainda não implementada. CEP: " + cep);
+  // Máscara CPF
+  const cpfInput = document.getElementById("cpf");
+  cpfInput.addEventListener("input", () => {
+    let value = cpfInput.value.replace(/\D/g, "");
+    if (value.length > 11) value = value.slice(0, 11);
+    value = value.replace(/(\d{3})(\d)/, "$1.$2");
+    value = value.replace(/(\d{3})(\d)/, "$1.$2");
+    value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    cpfInput.value = value;
+  });
+
+  // Máscara Telefone
+  const telefoneInput = document.getElementById("telefone");
+  telefoneInput.addEventListener("input", () => {
+    let value = telefoneInput.value.replace(/\D/g, "");
+    if (value.length > 11) value = value.slice(0, 11);
+    value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
+    value = value.replace(/(\d{5})(\d{4})$/, "$1-$2");
+    telefoneInput.value = value;
+  });
+
+  // Buscar CEP e atualizar mapa
+  window.buscarCep = function() {
+    const cep = document.getElementById("cep").value.replace(/\D/g, '');
+    if (cep.length !== 8) {
+      showToast("⚠️ CEP inválido!");
+      return;
+    }
+
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.erro) {
+          showToast("❌ CEP não encontrado!");
+          return;
+        }
+
+        document.getElementById("rua").value = data.logradouro;
+        document.getElementById("cidade").value = data.localidade;
+        document.getElementById("estado").value = data.uf;
+
+        const endereco = encodeURIComponent(`${data.logradouro}, ${data.localidade}, ${data.uf}`);
+        document.getElementById("mapa").src = `https://www.google.com/maps?q=${endereco}&output=embed`;
+
+        showToast("📍 Endereço carregado com sucesso!");
+      })
+      .catch(() => showToast("❌ Erro ao buscar CEP."));
+  };
+
+  // Toast
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
   }
+
+  // Envio do formulário
+  const form = document.getElementById("cadastroForm");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    showToast("✅ Cadastro enviado com sucesso!");
+    form.reset();
+  });
 </script>
 
 </body>

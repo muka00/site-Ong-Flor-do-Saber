@@ -1,0 +1,13 @@
+/* Estilos específicos da página de voluntários */
+
+h2 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+/* Checkbox com input extra */
+#outrosTextoInteresse,
+#outrosTextoExp {
+  display: none;
+  margin-top: 8px;
+}

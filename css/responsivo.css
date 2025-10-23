@@ -1,0 +1,22 @@
+@media (max-width: 1440px) { 
+  .container { padding: var(--esp-4); } 
+}
+
+@media (max-width: 1200px) { 
+  .sobre { flex-direction: column; text-align: center; } 
+}
+
+@media (max-width: 992px) { 
+  .grid-12 { grid-template-columns: repeat(8, 1fr); } 
+}
+
+@media (max-width: 768px) { 
+  .grid-12 { grid-template-columns: repeat(4, 1fr); } 
+
+  .menu-lista { display: none; }
+  .menu-hamburguer { display: block; cursor: pointer; font-size: 1.5rem; padding: var(--esp-1); }
+}
+
+@media (max-width: 480px) { 
+  .grid-12 { grid-template-columns: repeat(2, 1fr); } 
+}

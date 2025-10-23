@@ -4,106 +4,202 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projetos - ONG Flor do Saber 🌼</title>
-  <style>
-    body {
-      background-color: #f2f2f2; /* cinza claro */
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center; /* centraliza textos */
-    }
-    header div {
-      background-color: #4CAF50;
-      padding: 40px 0;
-      color: white;
-    }
-    nav a {
-      margin: 0 5px;
-      text-decoration: none;
-      color: #000;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main section {
-      margin: 30px 0;
-      padding: 20px;
-    }
-    main img {
-      display: block;
-      margin: 10px auto;
-      max-width: 100%;
-      height: auto;
-    }
-    main a {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
-      color: #4CAF50;
-      font-weight: bold;
-    }
-    main a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      margin-top: 30px;
-      padding: 20px 0;
-      background-color: #ddd;
-    }
-  </style>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+  <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
 
 <header>
-  <div>
+  <div class="header-top">
     <h1>ONG Flor do Saber 🌼</h1>
   </div>
 
-<!-- Menu de navegação -->
-  <nav style="background-color:white; text-align:center; padding:10px 0; border-top:5px solid #4CAF50;">
-    <a href="index.html" style="color:black; text-decoration:none; margin:0 10px;">Início</a> |
-    <a href="projetos.html" style="color:black; text-decoration:none; margin:0 10px;">Projetos</a> |
-    <a href="cadastro.html" style="color:black; text-decoration:none; margin:0 10px;">Cadastre-se</a> |
-    <a href="doacoes.html" style="color:black; text-decoration:none; margin:0 10px;">Doações</a> |
-    <a href="transparencia.html" style="color:black; text-decoration:none; margin:0 10px;">Portal da Transparência</a> |
-    <a href="contato.html" style="color:black; text-decoration:none; margin:0 10px;">Contato</a> |
-    <a href="blog.html" style="color:black; text-decoration:none; margin:0 10px;">Nosso Blog</a>
+  <nav class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="cadastro.html">Cadastre-se</a></li>
+      <li><a href="doacoes.html">Doações</a></li>
+      <li><a href="transparencia.html">Portal da Transparência</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="blog.html">Nosso Blog</a></li>
+    </ul>
   </nav>
-
 </header>
 
-<main>
-  <h2>Projetos Sociais da Flor do Saber</h2>
+<main class="projetos">
+  <h2>Projetos Sociais da Flor do Saber 🌼</h2>
 
-  <!-- Projeto 1 -->
-  <section>
-    <h3>Reforço Escolar</h3>
-    <img src="imagens/dever_de_casa.png" alt="Dever de casa">
-    <p>Oferecemos aulas de reforço escolar para crianças em situação de vulnerabilidade, promovendo aprendizado e desenvolvimento educacional.</p>
-    <a href="voluntariado.html">Inscreva-se como voluntário</a>
-  </section>
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="imagens/dever_de_casa.png" alt="Dever de casa">
+      <h3>Reforço Escolar</h3>
+      <p>Oferecemos aulas de reforço escolar para crianças em situação de vulnerabilidade, promovendo aprendizado e desenvolvimento educacional.</p>
+      <form action="cadastro.html">
+        <button type="submit">Inscreva-se como voluntário</button>
+      </form>
+    </div>
 
-  <!-- Projeto 2 -->
-  <section>
-    <h3>Atividades Recreativas e Culturais</h3>
-    <img src="imagens/crianças_brincando_no_parque.png" alt="Crianças brincando">
-    <p>Realizamos oficinas de arte, música e recreação, incentivando a criatividade e socialização das crianças.</p>
-    <a href="voluntariado.html">Inscreva-se como voluntário</a>
-  </section>
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="imagens/crianças_brincando_no_parque.png" alt="Crianças brincando">
+      <h3>Atividades Recreativas e Culturais</h3>
+      <p>Realizamos oficinas de arte, música e recreação, incentivando a criatividade e socialização das crianças.</p>
+      <form action="cadastro.html">
+        <button type="submit">Inscreva-se como voluntário</button>
+      </form>
+    </div>
 
-  <!-- Projeto 3 -->
-  <section>
-    <h3>Eventos Educativos</h3>
-    <img src="imagens/teatro_de_fantoches.png" alt="Evento educativo">
-    <p>Organizamos eventos educativos e workshops para crianças e famílias, promovendo cidadania, conhecimento e diversão.</p>
-    <a href="voluntariado.html">Inscreva-se como voluntário</a>
-  </section>
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="imagens/teatro_de_fantoches.png" alt="Evento educativo">
+      <h3>Eventos Educativos</h3>
+      <p>Organizamos eventos educativos e workshops para crianças e famílias, promovendo cidadania, conhecimento e diversão.</p>
+      <form action="cadastro.html">
+        <button type="submit">Inscreva-se como voluntário</button>
+      </form>
+    </div>
 
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="imagens/projeto_culinaria.png" alt="Cozinhando com amor">
+      <h3>Projeto Cozinhando com Amor</h3>
+      <p>Promovemos atividades de culinária para as crianças, ensinando a importância de uma alimentação equilibrada e divertida.</p>
+      <form action="cadastro.html">
+        <button type="submit">Inscreva-se como voluntário</button>
+      </form>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <img src="imagens/projeto_musical.png" alt="Projeto Musical">
+      <h3>Quem Canta os Males Espanta</h3>
+      <p>Oficinas de música e recreação que promovem a socialização e a expressão artística das crianças.</p>
+      <form action="cadastro.html">
+        <button type="submit">Inscreva-se como voluntário</button>
+      </form>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <img src="imagens/roda_de_sentimentos.png" alt="Roda de sentimentos">
+      <h3>Roda de Sentimentos</h3>
+      <p>Rodas de conversa para que as crianças expressem suas emoções e participem de atividades afetivas.</p>
+      <form action="cadastro.html">
+        <button type="submit">Inscreva-se como voluntário</button>
+      </form>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+      <img src="imagens/atividade_reciclar.png" alt="Os três R">
+      <h3>Reciclar Faz Parte do Nosso Dia a Dia</h3>
+      <p>Ensinamos a importância dos três "R" (reduzir, reutilizar, reciclar) para proteger o meio ambiente.</p>
+      <form action="cadastro.html">
+        <button type="submit">Inscreva-se como voluntário</button>
+      </form>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <img src="imagens/crianças_comendo.png" alt="Comida">
+      <h3>Projeto Fome Zero</h3>
+      <p>Oferecemos alimentação saudável às crianças atendidas pela ONG, combatendo a fome infantil.</p>
+      <form action="cadastro.html">
+        <button type="submit">Inscreva-se como voluntário</button>
+      </form>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+      <img src="imagens/atividade_socio_esportiva.png" alt="Atividade Socio Esportiva">
+      <h3>Projeto Lazer</h3>
+      <p>Oferecemos Brincadeiras interativas para tirac nossas crianças do dominio das telas.</p>
+      <form action="cadastro.html">
+        <button type="submit">Inscreva-se como voluntário</button>
+      </form>
+    </div>
+  </div>
 </main>
+<section class="voluntarios">
+  <h2>Nossos Voluntários 💛</h2>
+  <div class="grid-12">
+
+    <div class="vol-card">
+      <h3>Ana Souza</h3>
+      <p>Reforço Escolar</p>
+    </div>
+    <div class="vol-card">
+      <h3>Lucas Pereira</h3>
+      <p>Alimentação</p>
+    </div>
+    <div class="vol-card">
+      <h3>Mariana Costa</h3>
+      <p>Artes e Recreação</p>
+    </div>
+    <div class="vol-card">
+      <h3>João Lima</h3>
+      <p>Apoio Psicológico</p>
+    </div>
+    <div class="vol-card">
+      <h3>Carla Mendes</h3>
+      <p>Eventos</p>
+    </div>
+    <div class="vol-card">
+      <h3>Rafael Silva</h3>
+      <p>Administração</p>
+    </div>
+
+    <div class="vol-card">
+      <h3>Natanael Santos</h3>
+      <p>Reforço Escolar</p>
+    </div>
+    <div class="vol-card">
+      <h3>Lucas Piorino</h3>
+      <p>Aula de Mágica</p>
+    </div>
+    <div class="vol-card">
+      <h3>João Vitor</h3>
+      <p>Financeiro</p>
+    </div>
+    <div class="vol-card">
+      <h3>Camila Coelho</h3>
+      <p>Apoio Mágico</p>
+    </div>
+    <div class="vol-card">
+      <h3>Clara Mendes</h3>
+      <p>Ajudante Geral</p>
+    </div>
+    <div class="vol-card">
+      <h3>Alexandre Pió</h3>
+      <p>Comunicação</p>
+    </div>
+
+  </div>
+</section>
+
+
 
 <footer>
-  <p>&copy; 2025 ONG Flor do Saber 🌼. Todos os direitos reservados.</p>
+  <p>&copy; <strong>ONG Flor do Saber 🌼. Todos os direitos reservados.</strong></p>
 </footer>
+
+<!-- JS Menu Hamburguer -->
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>

@@ -1,0 +1,99 @@
+/* ====== Estilos Globais ====== */
+body {
+  background-color: #f2f2f2; 
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center; 
+}
+
+/* ====== Cabeçalho ====== */
+header div {
+  background-color: #4CAF50;
+  padding: 40px 0;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* ====== Navegação ====== */
+nav {
+  margin: 10px 0;
+  background-color: white;
+  padding: 10px 0;
+  border-top: 5px solid #4CAF50;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Conteúdo Principal ====== */
+main {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+main h2 {
+  margin-top: 0;
+}
+
+/* ====== Formulário ====== */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select, textarea, button {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical; /* permite apenas redimensionar verticalmente */
+}
+
+/* ====== Botão ====== */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* ====== Rodapé ====== */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ddd;
+}

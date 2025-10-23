@@ -1,0 +1,37 @@
+:root {
+  /* === Cores === */
+  --cor-primaria: #4CAF50;
+  --cor-secundaria: #81C784;
+  --cor-neutra: #ffffff;
+  --cor-texto: #000;
+  --cor-branca: #fff;
+  --cor-footer: #ddd;
+  --cor-hover: #04681a;
+  --cor-borda: #ccc;
+  --cor-destaque: #27d82d;
+--cor-fundo-secundario: #f5f5f5;
+
+
+  /* === Tipografia === */
+  --fonte-small: 12px;
+  --fonte-base: 16px;
+  --fonte-media: 20px;
+  --fonte-grande: 28px;
+  --fonte-xgrande: 36px;
+
+  /* === Espaçamento modular === */
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+  --esp-6: 64px;
+
+  /* === Componentes extras === */
+  --cor-badge: #ff9800;
+  --cor-badge-texto: #fff;
+  --cor-alerta: #f44336;
+  --cor-sucesso: #4CAF50;
+  --cor-info: #2196F3;
+  --sombra-card: 0 4px 10px rgba(0,0,0,0.1);
+}

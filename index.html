@@ -4,149 +4,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONG Flor do Saber 🌼</title>
-  <style>
-    body {
-      background-color: #f2f2f2; /* cinza claro */
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center; /* centraliza os textos por padrão */
-    }
-    header div {
-      background-color: #4CAF50;
-      padding: 40px 0;
-      color: white;
-    }
-    nav a {
-      margin: 0 5px;
-      text-decoration: none;
-      color: #000;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main img {
-      display: block;
-      margin: 10px auto;
-      max-width: 100%;
-      height: auto;
-    }
-    main ul {
-      display: inline-block;
-      text-align: left;
-      margin: 0 auto 20px auto;
-      padding-left: 20px;
-    }
-    video, audio {
-      display: block;
-      margin: 20px auto;
-      max-width: 940px;
-      width: 100%;
-    }
-    footer {
-      margin-top: 30px;
-      padding: 20px 0;
-      background-color: #ddd;
-    }
-  </style>
-</head>
-<body>
 
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/passador.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
 <header>
-  <div>
+  <div class="header-top">
     <h1>ONG Flor do Saber 🌼</h1>
   </div>
 
-<!-- Menu de navegação -->
-  <nav style="background-color:white; text-align:center; padding:10px 0; border-top:5px solid #4CAF50;">
-    <a href="index.html" style="color:black; text-decoration:none; margin:0 10px;">Início</a> |
-    <a href="projetos.html" style="color:black; text-decoration:none; margin:0 10px;">Projetos</a> |
-    <a href="cadastro.html" style="color:black; text-decoration:none; margin:0 10px;">Cadastre-se</a> |
-    <a href="doacoes.html" style="color:black; text-decoration:none; margin:0 10px;">Doações</a> |
-    <a href="transparencia.html" style="color:black; text-decoration:none; margin:0 10px;">Portal da Transparência</a> |
-    <a href="contato.html" style="color:black; text-decoration:none; margin:0 10px;">Contato</a> |
-    <a href="blog.html" style="color:black; text-decoration:none; margin:0 10px;">Nosso Blog</a>
+  <nav class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+    <ul id="menu">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="cadastro.html">Cadastre-se</a></li>
+      <li><a href="doacoes.html">Doações</a></li>
+      <li><a href="transparencia.html">Portal da Transparência</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="blog.html">Nosso Blog</a></li>
+    </ul>
   </nav>
 </header>
 
 <main id="inicio">
-
-  <!-- Sobre Nós -->
-  <h2>Sobre Nós</h2>
-
-  <section>
-    <h3>🌱 Nossa Missão</h3>
-    <img src="imagens/crianças_brincando.png" alt="Missão" width="800">
-    <p>A ONG Flor do Saber tem como propósito promover o desenvolvimento integral de crianças em situação de vulnerabilidade...</p>
-    <p>Atuamos com programas de reforço escolar, oficinas culturais, atividades recreativas e apoio familiar...</p>
-    <p>Nossa missão é também inspirar a comunidade a valorizar a infância e a educação...</p>
+  <!-- SEÇÃO SOBRE NÓS -->
+  <section class="sobre">
+    <img src="imagens/crianças_brincando.png" alt="Crianças brincando">
+    <div class="texto">
+      <h2>🌱 Sobre Nós</h2>
+      <p>A ONG Flor do Saber tem como propósito promover o desenvolvimento integral de crianças em situação de vulnerabilidade social.</p>
+      <p>Com projetos voltados à educação, cultura e lazer, buscamos transformar vidas e fortalecer a comunidade.</p>
+      <form action="projetos.html">
+        <button type="submit">Saiba Mais</button>
+      </form>
+    </div>
   </section>
 
-  <section>
-    <h3>🌟 Nossa Visão</h3>
-    <img src="imagens/visao.png" alt="Visão" width="1000">
-    <p>Ser reconhecida como referência em ações sociais e educativas que impactam positivamente a vida de crianças e famílias...</p>
-    <p>Almejamos, também, fomentar a participação de voluntários e parceiros que compartilhem dos mesmos valores...</p>
+  <!-- Nossa Missão -->
+  <section class="sobre">
+    <img src="imagens/crianças_brincando.png" alt="Missão">
+    <div class="texto">
+      <h2>🌱 Nossa Missão</h2>
+      <p>Promover o desenvolvimento integral de crianças em situação de vulnerabilidade.</p>
+      <p>Atuamos com reforço escolar, oficinas culturais, atividades recreativas e apoio familiar.</p>
+      <p>Inspiramos a comunidade a valorizar a infância e a educação desde cedo.</p>
+      <form action="projetos.html">
+        <button type="submit">Saiba Mais</button>
+      </form>
+    </div>
   </section>
 
-  <section>
-    <h3>💚 Nossos Valores</h3>
+  <!-- Nossa Visão -->
+  <section class="sobre">
+    <img src="imagens/visao.png" alt="Visão">
+    <div class="texto">
+      <h2>🌟 Nossa Visão</h2>
+      <p>Ser reconhecida como referência em ações sociais e educativas que transformam vidas.</p>
+      <p>Queremos inspirar voluntários e parceiros a compartilharem nossos valores.</p>
+    </div>
+  </section>
+
+  <!-- Nossos Valores -->
+  <section class="sobre">
     <img src="imagens/mandala_valores.png" alt="Mandala Valores" width="800">
-    <ul>
-      <li><strong>Respeito e empatia:</strong> Tratamos cada criança, família e voluntário com atenção e compreensão...</li>
-      <li><strong>Inclusão e diversidade:</strong> Acreditamos que todas as crianças têm direito às mesmas oportunidades...</li>
-      <li><strong>Educação como transformação:</strong> Entendemos a educação como um instrumento poderoso...</li>
-      <li><strong>Compromisso social:</strong> Nossas ações são pautadas na responsabilidade de gerar impacto positivo...</li>
-      <li><strong>Transparência e ética:</strong> Garantimos clareza e honestidade em todas as nossas atividades...</li>
-      <li><strong>Inovação e criatividade:</strong> Incentivamos soluções criativas e inovadoras para potencializar nossos projetos...</li>
-    </ul>
+    <div class="texto">
+      <h2>💚 Nossos Valores</h2>
+      <ul>
+        <li><strong>Respeito e empatia:</strong> atenção e compreensão a todos.</li>
+        <li><strong>Inclusão e diversidade:</strong> todas as crianças têm direito às mesmas oportunidades.</li>
+        <li><strong>Educação como transformação:</strong> acreditamos no poder da educação.</li>
+        <li><strong>Compromisso social:</strong> responsabilidade de gerar impacto positivo.</li>
+        <li><strong>Transparência e ética:</strong> clareza e honestidade em todas as ações.</li>
+        <li><strong>Inovação e criatividade:</strong> soluções criativas para nossos projetos.</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Galeria de Fotos -->
-  <h2>Galeria de Fotos 📸</h2>
-  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:10px;">
-    <img src="imagens/atividade_reciclar.png" alt="Atividade Reciclar" loading="lazy">
-    <img src="imagens/atividade_socio_esportiva.png" alt="Atividade Sócio Esportiva" loading="lazy">
-    <img src="imagens/aula_de_arte.png" alt="Aula de Arte" loading="lazy">
-    <img src="imagens/aula_de_xadrez.png" alt="Aula de Xadrez" loading="lazy">
-    <img src="imagens/brincando_caixa_de_areia.png" alt="Caixa de Areia" loading="lazy">
-    <img src="imagens/confraternização.png" alt="Confraternização" loading="lazy">
-    <img src="imagens/crianças_brincando_no_parque.png" alt="Crianças no Parque" loading="lazy">
-    <img src="imagens/crianças_brincando.png" alt="Crianças Brincando" loading="lazy">
-    <img src="imagens/crianças_comendo.png" alt="Crianças Comendo" loading="lazy">
-    <img src="imagens/Crianças_estudando.png" alt="Crianças Estudando" loading="lazy">
-    <img src="imagens/dever_de_casa.png" alt="Dever de Casa" loading="lazy">
-    <img src="imagens/hora_da_leitura.png" alt="Hora da Leitura" loading="lazy">
-    <img src="imagens/projeto_ciencia_divertida.png" alt="Projeto Ciência Divertida" loading="lazy">
-    <img src="imagens/projeto_culinaria.png" alt="Projeto de Culinária" loading="lazy">
-    <img src="imagens/projeto_de_dança.png" alt="Projeto de Dança" loading="lazy">
-    <img src="imagens/projeto_jardinagem.png" alt="Projeto de Jardinagem" loading="lazy">
-    <img src="imagens/projeto_lego.png" alt="Projeto Lego" loading="lazy">
-    <img src="imagens/projeto_musical.png" alt="Projeto Musical" loading="lazy">
-    <img src="imagens/roda_de_sentimentos.png" alt="Roda de Sentimentos" loading="lazy">
-    <img src="imagens/teatro_de_fantoches.png" alt="Teatro de Fantoches" loading="lazy">
-  </div>
+  <!-- Galeria -->
+  <section class="midia">
+    <h2>Galeria de Fotos 📸</h2>
+    <div class="carrossel">
+      <button class="prev">&#10094;</button>
+      <div class="slides">
+        <img src="imagens/atividade_reciclar.png" alt="Atividade Reciclar">
+        <img src="imagens/aula_de_arte.png" alt="Aula de Arte">
+        <img src="imagens/crianças_brincando_no_parque.png" alt="Crianças no Parque">
+        <img src="imagens/atividade_socio_esportiva.png" alt="Atividade Sócio Esportiva">
+        <img src="imagens/aula_de_xadrez.png" alt="Aula de Xadrez">
+        <img src="imagens/brincando_caixa_de_areia.png" alt="Caixa de Areia">
+        <img src="imagens/confraternização.png" alt="Confraternização">
+        <img src="imagens/crianças_comendo.png" alt="Crianças Comendo">
+        <!-- adicione mais imagens conforme desejar -->
+      </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
 
-  <!-- Vídeo Institucional -->
-  <h2>Vídeo Institucional</h2>
-  <video controls>
-    <source src="videos/video_ong_flor_do_saber.mp4" type="video/mp4">
-    Seu navegador não suporta vídeos.
-  </video>
+  <!-- Vídeo -->
+  <section class="midia">
+    <h2>🎥 Vídeo Institucional</h2>
+    <video controls>
+      <source src="videos/video_ong_flor_do_saber.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos.
+    </video>
+  </section>
 
   <!-- Depoimentos -->
-  <h2>Depoimentos:</h2>
-  <h3>Depoimento Pai de Aluno</h3>
-  <audio controls>
-    <source src="audios/depoimento.ogg" type="audio/mpeg">
-    Seu navegador não suporta áudio.
-  </audio>
-
+  <section class="midia">
+    <h2>Depoimentos 🎤</h2>
+    <h3>Pai do aluno João</h3>
+    <audio controls>
+      <source src="audios/depoimento.ogg" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+  </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 ONG Flor do Saber 🌼 | Todos os direitos reservados.</p>
+  <p>&copy; <strong>ONG Flor do Saber 🌼 | Todos os direitos reservados.</strong></p>
 </footer>
 
+<script src="Java/carrosel.js"></script>
+
+<!-- Script do menu hamburguer -->
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
 </body>
 </html>

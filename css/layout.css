@@ -1,0 +1,373 @@
+/* ======== RESET / GLOBAL ======== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-neutra, #ffffff);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header div {
+  background-color: var(--cor-primaria, #4CAF50);
+  padding: var(--esp-5, 20px) 0;
+  color: var(--cor-branca, white);
+}
+
+nav {
+  background-color: white;
+  text-align: center;
+  padding: 10px 0;
+  border-top: 5px solid var(--cor-primaria, #4CAF50);
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+main 
+  width: 90%;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: var(--cor-primaria, #4CAF50);
+  color: white;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 992px) {
+  header div {
+    padding: var(--esp-4, 15px) 0;
+  }
+}
+
+@media (max-width: 500px) {
+  nav a {
+    display: block;
+    margin: var(--esp-1, 5px) 0;
+  }
+}
+
+/* ======== SEÇÃO SOBRE / PROJETOS ======== */
+.sobre {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center;
+  gap: 40px;
+  padding: 60px;
+  background-color: #e0e0e0;
+  border-radius: 20px; /* cantos arredondados */
+  margin: 40px auto;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sobre img {
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.sobre .texto {
+  max-width: 400px;
+  color: #333;
+  text-align: left;
+}
+
+.sobre .texto h2, .sobre .texto h3 {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.sobre .texto p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.sobre .texto button {
+  background-color: var(--cor-primaria, #4CAF50);
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sobre .texto button:hover {
+  background-color: var(--cor-hover, #45a049);
+}
+
+/* ======== MÍDIA / GALERIA DE VÍDEOS E IMAGENS ======== */
+.midia {
+  background-color: #e0e0e0;
+  width: 90%;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.midia video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--esp-2, 20px);
+}
+
+.midia .galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.midia .galeria img {
+  width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.midia .galeria img:hover {
+  transform: scale(1.05);
+}
+.menu-lista {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+}
+
+/* ===== Estilo das Seções ===== */
+.caixa-form {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== Textos ===== */
+.caixa-form h2 {
+  color: #2d6a4f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.caixa-form p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.caixa-form label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* ===== Campos ===== */
+.caixa-form input[type="text"],
+.caixa-form input[type="email"],
+.caixa-form input[type="url"],
+.caixa-form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.caixa-form input:focus,
+.caixa-form textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76,175,80,0.3);
+}
+
+/* ===== Checkbox ===== */
+.caixa-form input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+/* ===== Botões ===== */
+.botao {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.botao:hover {
+  background-color: #388e3c;
+}
+
+/* ===== Separador ===== */
+hr {
+  width: 80%;
+  border: none;
+  border-top: 2px solid #e0e0e0;
+  margin: 50px auto;
+}
+
+.projetos {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.projetos h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px; /* espaçamento entre colunas */
+  width: 100%;
+  max-width: 1200px; /* centraliza o conteúdo */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Cada card ocupa 4 colunas = 3 cards por linha */
+.card {
+  grid-column: span 4;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 1.3em;
+  color: #444;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95em;
+  margin: 10px 0 20px;
+  line-height: 1.5;
+}
+
+.card button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #43a047;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+  .card {
+    grid-column: span 6; /* 2 cards por linha */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* 1 card por linha */
+  }
+  .card {
+    grid-column: span 12;
+  }
+}
+.voluntarios {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.voluntarios h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.vol-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  grid-column: span 4; /* cada card ocupa 4 das 12 colunas */
+}
+
+.vol-card h3 {
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.vol-card p {
+  color: #777;
+}

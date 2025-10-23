@@ -1,0 +1,36 @@
+/* ======== GRÁFICOS ======== */
+section {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+
+section .grafico {
+  flex: 0 0 auto;
+}
+
+section .legenda {
+  flex: 1;
+  text-align: left;
+  margin-left: 50px;
+}
+
+canvas {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+}
+
+.legenda div {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.legenda span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
