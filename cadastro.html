@@ -117,7 +117,8 @@
     <label><input type="checkbox" id="consentCheckbox"> Li e concordo com a <a href="#" onclick="togglePrivacy()">Política de Privacidade</a></label>
     <div id="privacyText" style="display:none;">
       <h3>Política de Privacidade</h3>
-      <p>A Flor do Saber respeita a privacidade de seus usuários...</p>
+      <p>A ONG Flo do Saber respeita rigorosamente as diretrizes da Lei Geral de Proteção de Dados Pessoais (LGPD), garantindo que todas as informações coletadas sejam tratadas com segurança, transparência e responsabilidade. Os dados dos usuários são utilizados exclusivamente para fins institucionais, com consentimento prévio e direito de acesso, correção ou exclusão a qualquer momento. Para mais detalhes sobre a legislação vigente, acesse o texto oficial da LGPD no site do Planalto:<a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">LEI Nº 13.709, DE 14 DE AGOSTO DE 2018</a>
+</p>
     </div>
 
     <br>
@@ -133,98 +134,11 @@
 </footer>
 
 <!-- JS -->
-<script>
-  // Menu
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-  menuToggle.addEventListener('click', () => menu.classList.toggle('active'));
+<script src="Java/menu.js"></script>
+<script src="Java/cadastro.js"></script>
+<script src="Java/templaters.js"></script>
+<script src="Java/validation.js"></script>
 
-  // Mostrar/esconder campos "outros"
-  const outrosCheckInteresse = document.getElementById("outrosCheckInteresse");
-  const outrosTextoInteresse = document.getElementById("outrosTextoInteresse");
-  outrosCheckInteresse.addEventListener("change", () => {
-    outrosTextoInteresse.style.display = outrosCheckInteresse.checked ? "block" : "none";
-    if(!outrosCheckInteresse.checked) outrosTextoInteresse.value = "";
-  });
-
-  const outrosCheckExp = document.getElementById("outrosCheckExp");
-  const outrosTextoExp = document.getElementById("outrosTextoExp");
-  outrosCheckExp.addEventListener("change", () => {
-    outrosTextoExp.style.display = outrosCheckExp.checked ? "block" : "none";
-    if(!outrosCheckExp.checked) outrosTextoExp.value = "";
-  });
-
-  // Política de privacidade
-  function togglePrivacy() {
-    const text = document.getElementById("privacyText");
-    text.style.display = text.style.display === "none" ? "block" : "none";
-  }
-
-  // Máscara CPF
-  const cpfInput = document.getElementById("cpf");
-  cpfInput.addEventListener("input", () => {
-    let value = cpfInput.value.replace(/\D/g, "");
-    if (value.length > 11) value = value.slice(0, 11);
-    value = value.replace(/(\d{3})(\d)/, "$1.$2");
-    value = value.replace(/(\d{3})(\d)/, "$1.$2");
-    value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-    cpfInput.value = value;
-  });
-
-  // Máscara Telefone
-  const telefoneInput = document.getElementById("telefone");
-  telefoneInput.addEventListener("input", () => {
-    let value = telefoneInput.value.replace(/\D/g, "");
-    if (value.length > 11) value = value.slice(0, 11);
-    value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
-    value = value.replace(/(\d{5})(\d{4})$/, "$1-$2");
-    telefoneInput.value = value;
-  });
-
-  // Buscar CEP e atualizar mapa
-  window.buscarCep = function() {
-    const cep = document.getElementById("cep").value.replace(/\D/g, '');
-    if (cep.length !== 8) {
-      showToast("⚠️ CEP inválido!");
-      return;
-    }
-
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-      .then(response => response.json())
-      .then(data => {
-        if (data.erro) {
-          showToast("❌ CEP não encontrado!");
-          return;
-        }
-
-        document.getElementById("rua").value = data.logradouro;
-        document.getElementById("cidade").value = data.localidade;
-        document.getElementById("estado").value = data.uf;
-
-        const endereco = encodeURIComponent(`${data.logradouro}, ${data.localidade}, ${data.uf}`);
-        document.getElementById("mapa").src = `https://www.google.com/maps?q=${endereco}&output=embed`;
-
-        showToast("📍 Endereço carregado com sucesso!");
-      })
-      .catch(() => showToast("❌ Erro ao buscar CEP."));
-  };
-
-  // Toast
-  function showToast(message) {
-    const toast = document.getElementById('toast');
-    toast.textContent = message;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3000);
-  }
-
-  // Envio do formulário
-  const form = document.getElementById("cadastroForm");
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    showToast("✅ Cadastro enviado com sucesso!");
-    form.reset();
-  });
-</script>
 
 </body>
 </html>

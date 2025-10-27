@@ -76,3 +76,50 @@ legend { font-weight: bold; }
   transform: translateY(-5px);
   box-shadow: var(--sombra-hover);
 }
+
+/* Estilos de validação */
+.error {
+    border: 2px solid #dc3545 !important;
+}
+
+.success {
+    border: 2px solid #28a745 !important;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.global-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #c3e6cb;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+.error {
+    text-align: center;
+    padding: 2rem;
+    color: #dc3545;
+    font-size: 1.2rem;
+}

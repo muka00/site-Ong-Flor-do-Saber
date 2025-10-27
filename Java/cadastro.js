@@ -1,7 +1,3 @@
-// Menu
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-menuToggle.addEventListener('click', () => menu.classList.toggle('active'));
 
 // Mostrar/esconder campos "outros" Áreas de Interesse
 const outrosCheckInteresse = document.getElementById("outrosCheckInteresse");
@@ -19,13 +15,6 @@ outrosCheckExp.addEventListener("change", () => {
   if(!outrosCheckExp.checked) outrosTextoExp.value = "";
 });
 
-// Política de privacidade
-const privacyLink = document.querySelector("a[onclick='togglePrivacy()']");
-privacyLink.addEventListener("click", (e) => {
-  e.preventDefault();
-  const text = document.getElementById("privacyText");
-  text.style.display = text.style.display === "none" ? "block" : "none";
-});
 
 // Máscara CPF
 const cpfInput = document.getElementById("cpf");
@@ -82,4 +71,33 @@ form.addEventListener("submit", function(e) {
   e.preventDefault();
   showToast("✅ Cadastro enviado com sucesso!");
   form.reset();
+});
+
+// Política de privacidade
+function togglePrivacy() {
+    const text = document.getElementById("privacyText");
+    if (!text) return;
+    text.style.display = text.style.display === "none" ? "block" : "none";
+}
+
+// Link que chama a política
+const privacyLink = document.querySelector("a[onclick='togglePrivacy()']");
+if (privacyLink) {
+    privacyLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        togglePrivacy();
+    });
+}
+
+
+
+// Salvar dados do formulário no armazenamento local
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const usuario = {
+    nome: document.getElementById("nome").value,
+    email: document.getElementById("email").value
+  };
+  localStorage.setItem("usuario", JSON.stringify(usuario));
+  alert("Cadastro salvo com sucesso!");
 });

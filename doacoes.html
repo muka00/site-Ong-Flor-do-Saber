@@ -37,7 +37,7 @@
   <h2>Faça sua Doação</h2>
   <p>Ajude a ONG Flor do Saber a transformar vidas. Preencha o formulário abaixo e escolha o valor da sua doação.</p>
 
-  <form action="#" method="post">
+  <form id="form-doacoes" action="#" method="post">
     <label for="nome">Nome Completo *</label>
     <input type="text" id="nome" name="nome" required>
 
@@ -66,26 +66,11 @@
   </form>
 </main>
 
-<script>
-  // Formata o telefone automaticamente
-  const telefoneInput = document.getElementById("telefone");
-  telefoneInput.addEventListener("input", function(e) {
-    let valor = e.target.value.replace(/\D/g, "");
-    if(valor.length > 11) valor = valor.slice(0,11);
-    let telefoneFormatado = "";
-    if(valor.length > 0) telefoneFormatado = "(" + valor.substring(0,2);
-    if(valor.length >= 3) telefoneFormatado += ") " + valor.substring(2,7);
-    if(valor.length >= 8) telefoneFormatado += "-" + valor.substring(7,11);
-    e.target.value = telefoneFormatado;
-  });
-
-  // Menu hamburguer
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-</script>
+<!-- JS -->
+<script src="Java/menu.js"></script>
+<script src="Java/doacoes.js"></script>
+<script src="Java/templaters.js"></script>
+<script src="Java/validation.js"></script>
 
 <footer>
   <p>&copy; 2025 ONG Flor do Saber 🌼. Todos os direitos reservados.</p>
