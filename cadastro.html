@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/responsivo.css">
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/contraste.css">
+
 </head>
 <body>
 
@@ -34,6 +36,7 @@
     </ul>
   </nav>
 </header>
+<button id="modo" aria-label="Alternar modo de contraste"></button>
 
 <main>
   <h2>Faça Seu Cadastro</h2>
@@ -117,7 +120,7 @@
     <label><input type="checkbox" id="consentCheckbox"> Li e concordo com a <a href="#" onclick="togglePrivacy()">Política de Privacidade</a></label>
     <div id="privacyText" style="display:none;">
       <h3>Política de Privacidade</h3>
-      <p>A ONG Flo do Saber respeita rigorosamente as diretrizes da Lei Geral de Proteção de Dados Pessoais (LGPD), garantindo que todas as informações coletadas sejam tratadas com segurança, transparência e responsabilidade. Os dados dos usuários são utilizados exclusivamente para fins institucionais, com consentimento prévio e direito de acesso, correção ou exclusão a qualquer momento. Para mais detalhes sobre a legislação vigente, acesse o texto oficial da LGPD no site do Planalto:<a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">LEI Nº 13.709, DE 14 DE AGOSTO DE 2018</a>
+      <p>A ONG Flo do Saber respeita rigorosamente as diretrizes da Lei Geral de Proteção de Dados Pessoais (LGPD), garantindo que todas as informações coletadas sejam tratadas com segurança, transparência e responsabilidade. Os dados dos usuários são utilizados exclusivamente para fins institucionais, com consentimento prévio e direito de acesso, correção ou exclusão a qualquer momento. Para mais detalhes sobre a legislação vigente, acesse o texto oficial da LGPD no site do Planalto: LEI Nº 13.709, DE 14 DE AGOSTO DE 2018</a>
 </p>
     </div>
 
@@ -129,7 +132,7 @@
 <!-- Toast container -->
 <div id="toast" class="toast"></div>
 
-<footer style="text-align:center; margin-top:20px; padding:20px; color:rgb(0, 0, 0);">
+<footer style="text-align:center; margin-top:1px; padding:1px; color:rgb(0, 0, 0);">
   <p>&copy; <strong>ONG Flor do Saber 🌼. Todos os direitos reservados.</strong></p>
 </footer>
 
@@ -138,6 +141,7 @@
 <script src="Java/cadastro.js"></script>
 <script src="Java/templaters.js"></script>
 <script src="Java/validation.js"></script>
+<script src="Java/contraste.js"></script>
 
 
 </body>

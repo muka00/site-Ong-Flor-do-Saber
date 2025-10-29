@@ -101,3 +101,4 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem("usuario", JSON.stringify(usuario));
   alert("Cadastro salvo com sucesso!");
 });
+
