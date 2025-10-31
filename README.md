@@ -2,7 +2,7 @@
 <hr>
 
 <p align="center">
-   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge" #vitrinedev/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
 </p>
 
 ### Tópicos 
@@ -69,7 +69,7 @@ Layout adaptável a diferentes tamanhos de tela (desktop, tablet e dispositivos 
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank"> <img src="https://th.bing.com/th/id/ODF.w7IaAaWhPYmAcSNIT_w_KA?w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="javascript" width="40" height="40"/> </a>
 <a href="https://git-scm.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git" width="40" height="40"/> </a>
 <a href="https://github.com/" target="_blank"> <img src="https://th.bing.com/th/id/ODF.bYAvaN8MCaSZfP0o7q_Z_w?w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="github" width="40" height="40"/> </a>
-###
+
 
 ## Acesso ao projeto
 
@@ -113,4 +113,4 @@ Siga o passo a passo abaixo:</p>
 
 ## Desenvolvedores
 
-| [<img src="https://avatars.githubusercontent.com/u/212030742?v=4" width=115><br><sub>Samuel Fernandes</sub>](https://github.com/muka00) 
+ [<img src="https://avatars.githubusercontent.com/u/212030742?v=4" width=115><br><sub>Samuel Fernandes</sub>](https://github.com/muka00) 
