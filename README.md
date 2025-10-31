@@ -113,4 +113,4 @@ Siga o passo a passo abaixo:</p>
 
 ## Desenvolvedores
 
-👨🏻‍💻[<img src="https://avatars.githubusercontent.com/u/212030742?v=4" width=115><br><sub>Samuel Fernandes</sub>](https://github.com/muka00) 
+[<img src="https://avatars.githubusercontent.com/u/212030742?v=4" width=115><br><sub>Samuel Fernandes</sub>](https://github.com/muka00) 
