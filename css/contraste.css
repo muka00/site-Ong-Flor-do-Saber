@@ -1,17 +1,17 @@
 /* ===== BOTÃO MODO CONTRASTE ===== */
 #modo {
-  position: fixed;       /* sempre fixo na tela */
-  top: 10px;             /* distância do topo */
-  right: 10px;           /* distância da direita */
-  width: 40px;           /* largura fixa */
-  height: 40px;          /* altura fixa */
-  font-size: 20px;       /* tamanho do ícone */
-  line-height: 40px;     /* centraliza verticalmente */
-  text-align: center;    /* centraliza horizontalmente */
+  position: fixed;       
+  top: 10px;             
+  right: 10px;           
+  width: 40px;           
+  height: 40px;          
+  font-size: 20px;       
+  line-height: 40px;     
+  text-align: center;    
   background-color: #FFD700;
   color: #000;
   border: none;
-  border-radius: 50%;   /* botão redondo */
+  border-radius: 50%;   
   cursor: pointer;
   transition: transform 0.1s ease, background-color 0.2s ease;
   z-index: 9999;        
@@ -21,9 +21,8 @@
 
 #modo:hover {
   transform: scale(1.2);
-  background-color: #FFC107; /* leve destaque ao passar o mouse */
+  background-color: #FFC107;
 }
-
 
 /* ===== MODO ESCURO ===== */
 body.modo-escuro {
@@ -33,9 +32,15 @@ body.modo-escuro {
 
 /* Ajusta seções principais */
 body.modo-escuro header,
-body.modo-escuro footer {
-  background-color: #fffdfd !important;
-  color: #fff !important;
+body.modo-escuro footer,
+body.modo-escuro nav,
+body.modo-escuro main,
+body.modo-escuro section,
+body.modo-escuro article,
+body.modo-escuro .card,
+body.modo-escuro div {
+  background-color: #1b1b1b !important;
+  color: #f5f5f5 !important;
 }
 
 /* Botões */
@@ -52,21 +57,24 @@ body.modo-escuro .btn:hover {
   color: #000 !important;
 }
 
-/* Inputs e formulários */
+/* Inputs, textareas e selects */
 body.modo-escuro input,
 body.modo-escuro textarea,
 body.modo-escuro select {
-  background-color: #ffffff !important;
-  color: #fff !important;
+  background-color: #222 !important;
+  color: #f5f5f5 !important;
   border: 1px solid #555 !important;
 }
 
-/* Cards, containers etc. */
-body.modo-escuro .card,
-body.modo-escuro section,
-body.modo-escuro article,
-body.modo-escuro div {
-  background-color: #1b1b1b !important;
+/* Placeholder de inputs */
+body.modo-escuro input::placeholder,
+body.modo-escuro textarea::placeholder {
+  color: #bbb !important;
+}
+
+/* Checkboxes e radio buttons (labels) */
+body.modo-escuro input[type="checkbox"] + label,
+body.modo-escuro input[type="radio"] + label {
   color: #f5f5f5 !important;
 }
 
@@ -79,19 +87,7 @@ body.modo-escuro a:hover {
   color: #fff !important;
 }
 
-
-body.modo-escuro nav,
-body.modo-escuro header {
-  background-color: #1b1b1b !important;
-  color: #f5f5f5 !important;
-}
-
-body.modo-escuro main,
-body.modo-escuro section {
-  background-color: #121212 !important;
-  color: #f5f5f5 !important;
-}
-
+/* Títulos */
 body.modo-escuro h1,
 body.modo-escuro h2,
 body.modo-escuro h3,
@@ -103,49 +99,7 @@ body.modo-escuro h6 {
   z-index: 2;
 }
 
-/* Garante que todo texto dentro dos cards fique claro no modo escuro */
-body.modo-escuro .card,
-body.modo-escuro .card p,
-body.modo-escuro .card span,
-body.modo-escuro .card li,
-body.modo-escuro .card h1,
-body.modo-escuro .card h2,
-body.modo-escuro .card h3,
-body.modo-escuro .card h4,
-body.modo-escuro .card h5,
-body.modo-escuro .card h6 {
-  color: #f5f5f5 !important;
-}
-
-/* Inputs, textareas e selects */
-body.modo-escuro input,
-body.modo-escuro textarea,
-body.modo-escuro select {
-  background-color: #222 !important;
-  color: #f5f5f5 !important; /* texto claro */
-  border: 1px solid #555 !important;
-}
-
-/* Placeholder de inputs */
-body.modo-escuro input::placeholder,
-body.modo-escuro textarea::placeholder {
-  color: #bbb !important;
-}
-
-/* Checkboxes e radio buttons (label texto) */
-body.modo-escuro input[type="checkbox"] + label,
-body.modo-escuro input[type="radio"] + label {
-  color: #f5f5f5 !important;
-}
-
-/* Para garantir que o texto dentro da caixa de formulário fique visível */
-body.modo-escuro .caixa-form p,
-body.modo-escuro .caixa-form span,
-body.modo-escuro .caixa-form label {
-  color: #f5f5f5 !important;
-}
-
-/* ===== CORREÇÃO DO FOOTER NO MODO ESCURO ===== */
+/* Footer */
 body.modo-escuro footer {
   background-color: #1e1e1e !important;
   color: #f5f5f5 !important;
@@ -164,3 +118,12 @@ body.modo-escuro footer a:hover {
   color: #ffffff !important;
 }
 
+/* ===== FOCO VISÍVEL PARA NAVEGAÇÃO POR TECLADO ===== */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid #FFD700 !important;
+  outline-offset: 2px;
+}
