@@ -88,3 +88,26 @@ Siga o passo a passo abaixo:
 
 [![Samuel Fernandes](https://avatars.githubusercontent.com/u/212030742?v=4)](https://github.com/muka00)  
 [**Samuel Fernandes**](https://github.com/muka00)
+
+## Versionamento e GitFlow
+
+O projeto segue a estratégia **GitFlow**, com branches organizadas da seguinte forma:
+
+- **main**: versão estável pronta para release  
+- **develop**: branch de desenvolvimento integrando todas as features  
+- **feature/***: branches de funcionalidades isoladas  
+
+### Commits Semânticos
+
+- `feat:` → novas funcionalidades  
+- `fix:` → correção de bugs  
+- `docs:` → alterações na documentação  
+
+### Releases
+
+| Versão   | Descrição                                     |
+|----------|-----------------------------------------------|
+| v1.0.0   | Estrutura inicial do site                      |
+| v1.1.0   | Melhorias no design e novas funcionalidades   |
+| v1.1.1   | Correção de bugs menores                       |
+| v4.0.0   | Versão final: acessibilidade, otimização e deploy |
