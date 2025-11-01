@@ -108,7 +108,8 @@ O projeto segue a estratégia **GitFlow**, com branches organizadas da seguinte 
 
 | Versão   | Descrição                                     |
 |----------|-----------------------------------------------|
-| v1.0.0   | Estrutura inicial do site                      |
-| v1.1.0   | Melhorias no design e novas funcionalidades   |
-| v1.1.1   | Correção de bugs menores                       |
-| v4.0.0   | Versão final: acessibilidade, otimização e deploy |
+| v01      | Estrutura inicial do site                      |
+| v02      | Implementação de CSS e componentes            |
+| v03      | Funcionalidades em JavaScript                 |
+| v04      | Versão final: acessibilidade, otimização e deploy |
+
